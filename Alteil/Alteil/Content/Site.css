@@ -1,0 +1,362 @@
+﻿body {
+    font-size: .85em;
+    font-family: Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: black;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+/* Styles for the whole thing
+-----------------------------------------------------------*/
+
+ol.carousel-indicators{
+    bottom:0px;
+    width:initial;
+    position:initial;
+    padding:0;
+    margin:0;
+    margin-top:25px;
+}
+
+div.carousel{
+    display:inline-block;
+}
+
+div.Title {
+    height: 19px;
+    line-height: 30px;
+    text-align: center;
+    margin:0px;
+    color:#fff;
+
+}
+
+span.stretch {
+    width: 100%;
+    display: inline-block;
+}
+
+div.Editor-Top, div.Editor-Bottom {
+text-align:justify;
+}
+
+
+div.divider {
+    width:100%;
+    height:17px;
+    background-image:url(Images/buildarea/divider.png);
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
+div.bottombar {
+    width:100%;
+    height:16px;
+    background-image:url(Images/buildarea/bottom-bar.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    position:absolute;
+    bottom:0px;
+    margin-bottom:-13px;
+}
+
+
+div.Library, div.Search-Filter, div.Card-Files {
+display:inline-block;
+vertical-align:top;
+
+}
+
+/* Styles for Library
+-----------------------------------------------------------*/
+div.Library {
+    width:489px;
+    height:365px;
+    background-image:url(Images/Library/library-box.png);
+    margin-top: 5px;
+    text-align:center;
+}
+
+div.Library-Selector 
+{
+    width:330px;
+    height:23px;
+    background-image:url(Images/Library/library-selected.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    margin-top:-7px;
+    display:inline-block;
+}
+
+div.Library-Selector div.Title {
+display:inline-block;
+width:50%;
+}
+
+div.Library-Container {
+    overflow:hidden;
+    white-space:nowrap;
+    position:relative;
+    left:25px;
+    top:25px;
+    width:439px;
+    height:315px;
+}
+
+
+div.Lib-Card {
+    width:50px;
+    Height:70px;
+    background-image:url(images/cardback.png);
+    display:inline-block;
+    margin: 0px 1px;
+}
+
+div.Card-Page {
+    display:inline-block;
+    text-align:initial;
+    white-space:initial;
+    vertical-align:top;
+}
+
+/* Styles for the Search Filter
+-----------------------------------------------------------*/
+div.Search-Filter {
+    width:310px;
+    height:374px;
+    background-image:url(Images/Searchbox/Search-Box.png);
+    text-align:justify;
+}
+
+div.Search-Values {
+margin:0px 10px;
+}
+
+div.search-row {
+background:black;
+line-height:2em;
+text-align:right;
+color:whitesmoke;
+width:100%;
+margin:1px;
+}
+
+div.Value-Box {
+    width:50%;
+    display:inline-block;
+}
+
+div.Sphere {
+text-align:justify;
+margin: 15px;
+vertical-align: middle;
+height: 36px;
+padding: 0px 10px;
+}
+
+label.Sphere-Button {
+width:36px;
+height:36px;
+background-image:url(Images/Searchbox/clear-gem.png);
+background-position:0px 0px;
+}
+
+input.Sphere-Search {
+    display:none;
+}
+
+
+/* Styles for the File list
+-----------------------------------------------------------*/
+
+div.Card-Files {
+    padding: 0px 0px;
+    margin:0px;
+    width:260px;
+    height:354px;
+    background-repeat:no-repeat;
+    background-image:url(Images/Files/file-list-box.png);
+}
+
+ol.File-List {
+    counter-reset:li; /* Initiate a counter */
+    margin-left:0; /* Remove the default left margin */
+    padding-left:0; /* Remove the default left padding */
+    margin-top:13px;
+}
+ol.File-List > li {
+    position:relative; /* Create a positioning context */
+    margin: 6px 10px 0px 34px;
+    padding-left:20px;
+    list-style:none; /* Disable the normal item numbering */
+    background:#ccc9c5;
+    height:26px;
+    line-height:26px;
+    box-shadow:rgb(128, 128, 128) 3px 3px 2px inset;
+}
+ol.File-List > li:before {
+    content:counter(li); /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    left:-28px;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+   /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    border:2px solid #212121;
+    color:#fff;
+    background:#525151;
+    font-weight:bold;
+    font-family:Electra, Arial, sans-serif;
+    text-align:center;
+    width:28px;
+    height:26px;
+}
+
+/* Styles for the File area
+-----------------------------------------------------------*/
+
+div.Editor-Bottom {
+    position: relative;
+    background-image:url(Images/buildarea/bottom-pattern.png);
+    height:380px;
+    width:100%;
+}
+div.iron-l, div.iron-r {
+    width:332px;
+    height:205px;
+    position:absolute; 
+    bottom:0px;
+}
+div.iron-l{
+    background-image:url(Images/buildarea/left-iron-work.png);
+    left:0;
+}
+div.iron-r{
+    background-image:url(Images/buildarea/right-iron-work.png);
+    right:0;
+}
+div.File-Box{
+    width:231px;
+    height:52px;
+    background-image:url(Images/buildarea/file-name-and-stat-box.png);
+    vertical-align:middle;
+    color:#fff;
+    text-align:center;
+    display:inline-block;
+
+}
+
+div.bottom-top-box {
+    padding:10px;
+    text-align:justify;
+}
+
+div.File-Souls {
+    vertical-align:top;
+    display:inline-block;
+}
+
+div.SoulCard{
+    counter-increment:ss;
+    width:50px;
+    Height:70px;
+    background-image:url(images/cardback.png);
+    position:relative;
+    display:inline-block;
+}
+
+div.SoulCard:after {
+        
+    content:counter(ss);
+    position:absolute; 
+    text-align:center;
+    width:50px;
+    line-height:70px;
+}
+
+div.File1 {
+text-align:justify;
+width:95%;
+margin:auto;
+}
+
+
+div.File2 {
+text-align:justify;
+width:87%;
+margin:auto;
+}
+
+
+
+div.FileCard {
+    width:79px;
+    Height:110px;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-image:url(images/brown-card.png);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    display:inline-block;
+    position:relative;
+    z-index:1;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}

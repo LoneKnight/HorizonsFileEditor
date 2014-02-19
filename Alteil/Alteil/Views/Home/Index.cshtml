@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<script>
+    jQuery(document).ready(function ($) {
+        $('#Default').perfectScrollbar();
+    });
+</script>
+
+
+
+<div class="Editor-Top">
+
+
+   <div id="File-List-Carousel" class="carousel">
+        <div class="Card-Files">
+            <div class="Title">Card Files</div>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <ol class="File-List">
+                        @for (var i = 1; i <= ViewBag.filelist; i++)
+                        {
+                            if ((i % 10) == 1 && i != 1)
+                            {
+                                @:</ol>
+                            @:</div>
+                            @:<div class="item">
+                                @:<ol class="File-List">
+                            }
+                            <li class="File-List-Item">Wasseir and Friends @i</li>
+                        }
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#File-List-Carousel" data-slide-to="0" class="active"></li>
+            @for (var j = 1; j <= ViewBag.filelist / 10; j++)
+            {
+                <li data-target="#File-List-Carousel" data-slide-to="@j" class=""></li>
+            }
+        </ol>
+    </div>
+
+    <div class="Search-Filter">
+        <div class="Title">Search Filter</div>
+        <form>
+        <div class="Sphere">
+            <label for="Refess" id="RefessButton" class="Sphere-Button"></label>
+            <input id="Refess" type="checkbox" class="Sphere-Search" value="true" checked="checked"></input>
+            <label for="Lawtia" id="LawtiaButton" class="Sphere-Button"></label>
+            <input id="Lawtia" type="checkbox" class="Sphere-Search" value="true" checked="checked"></input>
+            <label for="Gowen" id="GowenButton" class="Sphere-Button"></label>
+            <input id="Gowen" type="checkbox" class="Sphere-Search" value="true" checked="checked"></input>
+            <label for="Falkow" id="FalkowButton" class="Sphere-Button"></label>
+            <input id="Falkow" type="checkbox" class="Sphere-Search" value="true" checked="checked"></input>
+            <label for="Multi" id="MultiButton" class="Sphere-Button"></label>
+            <input id="Multi" type="checkbox" class="Sphere-Search" value="true" checked="checked"></input>
+            <label for="None" id="NoneButton" class="Sphere-Button"></label>
+            <input id="None" type="checkbox" class="Sphere-Search" value="true" checked="checked"></input>
+            <span class="stretch"></span>
+        </div>
+
+        <div class="Search-Values">
+            <div class="search-row">Card Level:<div class="Value-Box"></div></div>
+            <div class="search-row">Expansion:<div class="Value-Box"></div></div>
+            <div class="search-row">Subtype:<div class="Value-Box"></div></div>
+</div>
+        </form>
+    </div>
+
+    <div class="Library">
+        <div class="Library-Selector"><div class="Title">Your Cards</div><div class="Title">All Cards</div></div>
+        <div id="Default" class="Library-Container">
+            <div class="Card-Page">
+                @for (var i = 0; i < ViewBag.cardlist; i++)
+                {
+                    if ((i % 32) == 0 && i != 0)
+                    {
+                        @:</div><div class="Card-Page">
+                    }
+            <div class="Lib-Card"></div>
+                }
+            </div>
+        </div>
+    </div>
+    <span class="stretch"></span>
+</div>
+
+    <div class="divider"></div>
+
+    <div class="Editor-Bottom">
+        <div class="iron-l"></div>
+        <div class="iron-r"></div>
+        <div class="bottom-top-box">
+            <div class="File-Box">Stats</div>
+            <div class="File-Souls">
+                <div class="SoulCard"></div>
+                <div class="SoulCard"></div>
+                <div class="SoulCard"></div>
+                <div class="SoulCard"></div>
+                <div class="SoulCard"></div>
+            </div>
+            <div class="File-Box">Total battles: Wins: <br />Losses: Draws:</div>
+            <span class="stretch"></span>
+        </div>
+        <div class="File1">
+            @for (var i = 1; i <= 13; i++)
+            {
+                <div class="FileCard"></div>
+            }
+            <span class="stretch"></span>
+        </div>
+        <div class="File2">
+            @for (var i = 1; i <= 12; i++)
+            {
+                <div class="FileCard"></div>
+            }
+            <span class="stretch"></span>
+        </div>
+        <div class="bottombar"></div>
+    </div>
